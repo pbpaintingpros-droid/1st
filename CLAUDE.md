@@ -21,6 +21,9 @@
 ### Products commonly used
 Sherwin-Williams (Duration, Emerald, Loxon, ProBlock, ProCryl, Pro Industrial, SW 1050QD caulk), Dunn-Edwards (Spartawall, Spartashield, Evershield, Acriwall, Acrihues), Behr DeckOver.
 
+## Operating rules
+- **Product problems on a job site:** whenever there's a product issue (adhesion, peeling, finish, color, coverage, curing, etc.), contact the rep for that product's manufacturer (e.g., Sherwin-Williams, Dunn-Edwards, Behr) and ask them to come out and inspect it.
+
 ## Team (roles only)
 - **Marge** — full-time VA, longest-tenured. Highly valued.
 - **Santiago** — part-time (~25 hrs/week); production coordination. Unresolved customer choices route to him.
