@@ -22,10 +22,8 @@
 Sherwin-Williams (Duration, Emerald, Loxon, ProBlock, ProCryl, Pro Industrial, SW 1050QD caulk), Dunn-Edwards (Spartawall, Spartashield, Evershield, Acriwall, Acrihues), Behr DeckOver.
 
 ## Team (roles only)
-- **Marge** — full-time VA, longest-tenured, oversees the other VAs. Highly valued.
+- **Marge** — full-time VA, longest-tenured. Highly valued.
 - **Santiago** — part-time (~25 hrs/week); production coordination. Unresolved customer choices route to him.
-- **Rhen** — part-time / weekend VA.
-- **Jerex** — team member outside Marge's VA oversight.
 - No estimator right now (I took over sales Sept 2026). Future estimator target: 5% commission only, $1.5M/yr minimum, 40%+ close rate after 90 days.
 
 ## Software stack
@@ -36,7 +34,7 @@ Don't assume any integration or configuration is set up — ask or check.
 - **Estimate Performance & Recording Tracker** (Google Sheet): scores my Fireflies sales recordings — rapport, DISC, product/prep knowledge, defects spotted, same-day closing, and whether I offered good/better/best options.
 - **PaintScout setup**: product catalog uploads (Sherwin-Williams, Dunn-Edwards) in the format JP requested; coverage and production-rate assumptions.
 - **Scope templates**: reusable, copy-paste-ready scopes with blanks (exterior, cabinets, wood siding/trim). Kitchen-cabinet format is the preferred model.
-- **AI operations**: mapping Marge's and Santiago's workflows to find what AI can automate; production-capacity modeling.
+- **AI operations**: mapping Marge's and Santiago's workflows to find what AI can automate; production-capacity modeling. Considering replacing both roles with AI if feasible (not decided).
 - **PB Painting University**: Google Slides training program (paused).
 - **Subcontractor recruiting**: better screening and onboarding — stop chasing prospects.
 
