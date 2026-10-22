@@ -1,7 +1,17 @@
 import type { Actor } from "@/lib/auth/core";
 import { getDb } from "@/lib/db";
 import { AuthError } from "@/lib/errors";
+import { can } from "@/lib/permissions";
 import { requirePermission } from "./common";
+
+const FINANCIAL_KEYS = ["contract_amount_cents", "margin_cents", "margin_pct"];
+
+/** Remove customer-price fields from log entries for viewers without financial access. */
+function redact(v: unknown): unknown {
+  if (!v || typeof v !== "object" || Array.isArray(v)) return v;
+  const out = Object.fromEntries(Object.entries(v as Record<string, unknown>).filter(([k]) => !FINANCIAL_KEYS.includes(k)));
+  return Object.keys(out).length ? out : null;
+}
 
 export interface AuditRow {
   id: number;
@@ -39,7 +49,8 @@ export async function listAudit(actor: Actor | null, opts: { jobId?: string; ent
       order by a.id desc limit $${params.length}`,
     params,
   );
-  return rows;
+  if (can(actor.role, "jobs.view_financials")) return rows;
+  return rows.map((r) => ({ ...r, before: redact(r.before), after: redact(r.after) }));
 }
 
 export async function listNotifications(actor: Actor | null, limit = 50) {

@@ -1,0 +1,2 @@
+job_number,customer_name,customer_phone,address,city,zip,services,title,work_order,contract_amount,target_payout,proposed_start,proposed_end,estimated_days,deposit_received,colors_confirmed,external_ref
+S-2001,Sample Customer,619-555-0100,100 Example St,San Diego,92101,interior;doors,Interior repaint + 6 doors,"Walls in 3 bedrooms, 2 coats SW Emerald Matte. 6 interior doors, Emerald Urethane semi-gloss.","$4,800",2400,2030-01-15,2030-01-17,3,yes,no,

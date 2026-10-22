@@ -106,6 +106,15 @@ describe("coordinator limits", () => {
     for (const a of await pendingApprovals(s.coordinator)) expect(a.contract_amount_cents).toBeNull();
   });
 
+  it("does not see contract amounts in the activity log", async () => {
+    await updateJob(s.owner, s.jobs.j2, { contract_amount_cents: 654321 });
+    const ownerLog = JSON.stringify(await listAudit(s.owner, { jobId: s.jobs.j2 }));
+    expect(ownerLog).toContain("654321");
+    const coordLog = JSON.stringify(await listAudit(s.coordinator));
+    expect(coordLog).not.toContain("contract_amount_cents");
+    expect(coordLog).not.toContain("654321");
+  });
+
   it("cannot change contract amount or target payout", async () => {
     await expect(updateJob(s.coordinator, s.jobs.j1, { contract_amount_cents: 1 })).rejects.toBeInstanceOf(ForbiddenError);
     await expect(updateJob(s.coordinator, s.jobs.j1, { target_payout_cents: 1 })).rejects.toBeInstanceOf(ForbiddenError);

@@ -76,7 +76,7 @@ async function assertJobReady(q: Queryable, job: JobRow) {
   }
 }
 
-async function loadMatchInputs(q: Queryable, subIds?: string[]): Promise<MatchSubInput[]> {
+async function loadMatchInputs(q: Queryable, subIds?: string[]): Promise<(MatchSubInput & SubRow)[]> {
   const { rows } = await q.query<SubRow & { active_job_count: number }>(
     `select s.*, (select count(*)::int from jobs j where j.assigned_sub_id = s.id and j.status in ('assigned','in_progress')) as active_job_count
        from subcontractors s ${subIds ? "where s.id = any($1)" : "where s.status <> 'inactive'"}`,

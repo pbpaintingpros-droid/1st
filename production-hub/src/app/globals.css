@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef4fb;
+  --color-brand-100: #d6e4f5;
+  --color-brand-500: #2f6db5;
+  --color-brand-600: #24599a;
+  --color-brand-700: #1c467a;
+  --color-brand-900: #0f2744;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { @apply bg-slate-50 text-slate-900 antialiased; }
+
+/* Inputs: 16px on phones so iOS Safari doesn't zoom when tapping a field */
+@utility input { @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base shadow-sm focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100 sm:text-sm; }
+@utility label { @apply mb-1 block text-sm font-medium text-slate-700; }
+@utility btn { @apply inline-flex min-h-10 items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold shadow-sm transition disabled:opacity-50; }
+@utility btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+@utility btn-secondary { @apply btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-50; }
+@utility btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+@utility btn-success { @apply btn bg-emerald-600 text-white hover:bg-emerald-700; }
+@utility card { @apply rounded-xl border border-slate-200 bg-white shadow-sm; }
+@utility th { @apply px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-slate-500; }
+@utility td { @apply px-3 py-2 align-top text-sm; }
